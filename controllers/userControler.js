@@ -32,7 +32,7 @@ const signup = async(req,res,next)=>{
     });
     try{await newUser.save() }
     catch(err){console.log(err)}
-   return res.status(201).json({newUser})
+   return res.status(201).json(newUser)
 }
 
 

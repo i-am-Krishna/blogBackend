@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const BlogModel = require("./blog");
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -19,7 +18,7 @@ const userSchema = new mongoose.Schema({
     },
     blogs:[{
         type:mongoose.Types.ObjectId,
-        ref:BlogModel,
+        ref:"blog",
         required:true
     }]
 })
